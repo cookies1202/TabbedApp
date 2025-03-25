@@ -12,7 +12,17 @@ public class PageViewModel extends ViewModel {
     private LiveData<String> mText = Transformations.map(mIndex, new Function<Integer, String>() {
         @Override
         public String apply(Integer input) {
-            return "Hello world from section: " + input;
+            switch (input){
+                case 0:
+                    return "Max Mustermann";
+                case 1:
+                    return "Bypassoperation";
+                case 2:
+                    return "4000 (bezahlt) ";
+                default:
+                    return "";
+
+            }
         }
     });
 

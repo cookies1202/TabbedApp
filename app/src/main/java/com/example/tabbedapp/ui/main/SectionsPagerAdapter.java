@@ -29,13 +29,13 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         switch (position) {
             case 0:
-                return PlaceholderFragment.newInstance(1); // für "Patient"
+                return PlaceholderFragment.newInstance(0); // für "Patient"
             case 1:
-                return PlaceholderFragment.newInstance(2); // für "Behandlung"
+                return PlaceholderFragment.newInstance(1); // für "Behandlung"
             case 2:
-                return PlaceholderFragment.newInstance(3); // für "Rechnung"
+                return PlaceholderFragment.newInstance(2); // für "Rechnung"
             default:
-                return PlaceholderFragment.newInstance(-1); // Fallback
+                return null;
         }
     }
 
@@ -58,7 +58,7 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
     }
     @Override
     public int getCount() {
-        // Show 2 total pages.
+        // Show 3 total pages.
         return 3;
     }
 }
